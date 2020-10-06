@@ -1,0 +1,56 @@
+using System;
+
+class MainClass {
+  public static void Main (string[] args) {
+    
+     int limiteMax;
+            int limiteMin;
+
+            int limite1 = 1;
+            int limite2 = 1;
+
+            while (limite1 == limite2)
+            {
+                Console.WriteLine("The limits must be different");
+                Console.Write("Enter a first limit: ");
+                limite1 = Convert.ToInt32(Console.ReadLine());
+
+                Console.Write("Enter a second limit: ");
+                limite2 = Convert.ToInt32(Console.ReadLine());
+ 
+            }
+
+            Console.Write("Enter a number inside or outside those limits: ");
+            int outLimit = Convert.ToInt32(Console.ReadLine());
+
+            if (limite1 > limite2)
+            {
+
+                limiteMax = limite1;
+                limiteMin = limite2;
+            }
+            else 
+            {
+
+                limiteMin = limite1;
+                limiteMax = limite2;
+            }
+           
+
+            if (outLimit > limiteMax)
+            {
+                Console.WriteLine("You have entered " + outLimit + " which is greater than " + limiteMax + " which is the maximum");
+                Console.WriteLine("Resulting Integer = " + limiteMax);
+            }
+            else if (outLimit < limiteMin)
+            {
+                Console.WriteLine("You have entered " + outLimit + " which is lower than " + limiteMin + " which is the minimum");
+                Console.WriteLine("Resulting Integer = " + limiteMin);
+            }
+            else
+            {
+                Console.WriteLine("Your number is within the limits");
+            }
+
+  }
+}
